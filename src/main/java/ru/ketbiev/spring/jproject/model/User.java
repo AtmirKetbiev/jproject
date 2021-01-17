@@ -25,6 +25,12 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "roles_id"))
     private Set<Role> roles;
 
+    @OneToMany(cascade = CascadeType.ALL
+            , mappedBy = "user"
+            , fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private Set<Book> books;
+
     public User() {
     }
 
