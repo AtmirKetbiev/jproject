@@ -53,12 +53,16 @@ public class Geography {
         this.description = description;
     }
 
-    public Book getBook() {
-        return book;
-    }
+//    public Book getBook() {
+//        return book;
+//    }
+//
+//    public void setBook(Book book) {
+//        this.book = book;
+//    }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public int getBookId() {
+        return book.getId();
     }
 
     @Override
@@ -67,7 +71,7 @@ public class Geography {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", book=" + book +
+                ", book=" + book.getName() +
                 '}';
     }
 }

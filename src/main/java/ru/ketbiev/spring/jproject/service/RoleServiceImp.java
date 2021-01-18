@@ -31,12 +31,12 @@ public class RoleServiceImp implements RoleService {
     }
 
     @Override
-    public Optional<Role> getRole(Long id) {
+    public Optional<Role> getRole(int id) {
         return roleDAO.findById(id);
     }
 
     @Override
-    public void deleteRole(Long id) {
+    public void deleteRole(int id) {
         roleDAO.deleteById(id);
     }
 }

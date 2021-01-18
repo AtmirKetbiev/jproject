@@ -22,31 +22,31 @@ public class Book {
     private User user;
 
     @OneToMany(cascade = CascadeType.ALL
-            , mappedBy = "book"
+            //, mappedBy = "book"
             , fetch = FetchType.EAGER)
     @JoinColumn(name = "book_id")
     private Set<Chapter> chapters;
 
     @OneToMany(cascade = CascadeType.ALL
-            , mappedBy = "book"
+            //, mappedBy = "book"
             , fetch = FetchType.EAGER)
     @JoinColumn(name = "book_id")
     private Set<Character> characters;
 
     @OneToMany(cascade = CascadeType.ALL
-            , mappedBy = "book"
+            //, mappedBy = "book"
             , fetch = FetchType.EAGER)
     @JoinColumn(name = "book_id")
     private Set<Geography> geographies;
 
     @OneToMany(cascade = CascadeType.ALL
-            , mappedBy = "book"
+            //, mappedBy = "book"
             , fetch = FetchType.EAGER)
     @JoinColumn(name = "book_id")
     private Set<History> histories;
 
     @OneToMany(cascade = CascadeType.ALL
-            , mappedBy = "book"
+            //, mappedBy = "book"
             , fetch = FetchType.EAGER)
     @JoinColumn(name = "book_id")
     private Set<Note> notes;
@@ -84,12 +84,16 @@ public class Book {
         this.description = description;
     }
 
-    public User getUser() {
-        return user;
-    }
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
-    public void setUser(User user) {
-        this.user = user;
+    public int getUserId() {
+        return user.getId();
     }
 
     public Set<Chapter> getChapters() {
@@ -138,7 +142,7 @@ public class Book {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", user=" + user +
+                //", user=" + user.getUsername() +
                 ", chapters=" + chapters +
                 ", characters=" + characters +
                 ", geographies=" + geographies +

@@ -56,12 +56,16 @@ public class Chapter {
         this.content = content;
     }
 
-    public Book getBook() {
-        return book;
-    }
+//    public Book getBook() {
+//        return book;
+//    }
+//
+//    public void setBook(Book book) {
+//        this.book = book;
+//    }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public int getBookId() {
+        return book.getId();
     }
 
     @Override
@@ -70,7 +74,7 @@ public class Chapter {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", content='" + content + '\'' +
-                ", book=" + book +
+                //", book=" + book.getName() +
                 '}';
     }
 }

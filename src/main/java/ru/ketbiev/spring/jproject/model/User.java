@@ -8,7 +8,7 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "username")
     private String username;
@@ -26,7 +26,7 @@ public class User {
     private Set<Role> roles;
 
     @OneToMany(cascade = CascadeType.ALL
-            , mappedBy = "user"
+            //, mappedBy = "user"
             , fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private Set<Book> books;
@@ -34,11 +34,11 @@ public class User {
     public User() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -74,6 +74,14 @@ public class User {
         this.roles = roles;
     }
 
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -82,6 +90,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +
                 ", roles=" + roles +
+                ", books=" + books +
                 '}';
     }
 }

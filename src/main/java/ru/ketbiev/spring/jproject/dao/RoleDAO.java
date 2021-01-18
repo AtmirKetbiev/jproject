@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import ru.ketbiev.spring.jproject.model.Role;
 
 @Repository
-public interface RoleDAO extends JpaRepository<Role, Long> {
+public interface RoleDAO extends JpaRepository<Role, Integer> {
 }

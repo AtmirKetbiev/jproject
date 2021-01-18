@@ -41,12 +41,16 @@ public class Note {
         this.description = description;
     }
 
-    public Book getBook() {
-        return book;
-    }
+//    public Book getBook() {
+//        return book;
+//    }
+//
+//    public void setBook(Book book) {
+//        this.book = book;
+//    }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public int getBookId() {
+        return book.getId();
     }
 
     @Override
@@ -54,7 +58,7 @@ public class Note {
         return "Note{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
-                ", book=" + book +
+                ", book=" + book.getName() +
                 '}';
     }
 }

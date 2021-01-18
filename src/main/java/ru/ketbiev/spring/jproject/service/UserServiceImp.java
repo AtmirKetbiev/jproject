@@ -30,12 +30,12 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public Optional<User> getUser(Long id){
+    public Optional<User> getUser(int id){
         return userDAO.findById(id);
     }
 
     @Override
-    public void deleteUser(Long id) {
+    public void deleteUser(int id) {
         userDAO.deleteById(id);
     }
 }

@@ -57,12 +57,16 @@ public class Character {
         this.description = description;
     }
 
-    public Book getBook() {
-        return book;
-    }
+//    public Book getBook() {
+//        return book;
+//    }
+//
+//    public void setBook(Book book) {
+//        this.book = book;
+//    }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public int getBookId() {
+        return book.getId();
     }
 
     public int getFirst_chapters_id() {
@@ -79,7 +83,7 @@ public class Character {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", book=" + book +
+                //", book=" + book.getName() +
                 ", first_chapters_id=" + first_chapters_id +
                 '}';
     }
