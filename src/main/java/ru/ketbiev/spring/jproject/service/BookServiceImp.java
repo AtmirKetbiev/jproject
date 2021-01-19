@@ -40,7 +40,7 @@ public class BookServiceImp implements BookService {
     }
 
     @Override
-    public List<Book> getAllMyBook(int id) {
-        return bookDAO.getAllMyBook(id);
+    public List<Book> getAllMyBook(int idUser) {
+        return bookDAO.findAllMine(idUser);
     }
 }

@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface BookDAO  extends JpaRepository<Book, Integer> {
     @Query("SELECT b FROM Book b WHERE b.user.id = ?1")
-    List<Book> getAllMyBook(Integer id);
+    List<Book> findAllMine(Integer id);
 }

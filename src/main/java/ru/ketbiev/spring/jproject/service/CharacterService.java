@@ -1,5 +1,6 @@
 package ru.ketbiev.spring.jproject.service;
 
+import ru.ketbiev.spring.jproject.model.Chapter;
 import ru.ketbiev.spring.jproject.model.Character;
 
 import java.util.List;
@@ -11,4 +12,6 @@ public interface CharacterService {
     void saveCharacter(Character character);
     Optional<Character> getCharacter(int id);
     void deleteCharacter(int id);
+    List<Character> getAllMyCharacter(int idBook);
+
 }

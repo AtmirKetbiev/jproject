@@ -1,5 +1,6 @@
 package ru.ketbiev.spring.jproject.service;
 
+import ru.ketbiev.spring.jproject.model.Chapter;
 import ru.ketbiev.spring.jproject.model.History;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface HistoryService {
     void saveHistory(History history);
     Optional<History> getHistory(int id);
     void deleteHistory(int id);
+    List<History> getAllMyHistory(int idBook);
 }

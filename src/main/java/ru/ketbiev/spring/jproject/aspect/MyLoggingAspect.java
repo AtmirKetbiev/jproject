@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class MyLoggingAspect {
-    @Around("execution(* ru.ketbiev.spring.jproject.dao.*.*(..))")
+    @Around("execution(* ru.ketbiev.spring.jproject.*.*.*(..))")
     public Object aroundAllRepositoryMethodsAround(
             ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 

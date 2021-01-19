@@ -11,5 +11,5 @@ public interface BookService {
     void saveBook(Book book);
     Optional<Book> getBook(int id);
     void deleteBook(int id);
-    List<Book> getAllMyBook(int id);
+    List<Book> getAllMyBook(int idUser);
 }

@@ -1,5 +1,6 @@
 package ru.ketbiev.spring.jproject.service;
 
+import ru.ketbiev.spring.jproject.model.Chapter;
 import ru.ketbiev.spring.jproject.model.Geography;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface GeographyService {
     void saveGeography(Geography geography);
     Optional<Geography> getGeography(int id);
     void deleteGeography(int id);
+    List<Geography> getAllMyGeography(int idBook);
 }

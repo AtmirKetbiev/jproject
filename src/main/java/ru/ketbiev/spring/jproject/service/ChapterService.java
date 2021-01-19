@@ -11,4 +11,5 @@ public interface ChapterService {
     void saveChapter(Chapter chapter);
     Optional<Chapter> getChapter(int id);
     void deleteChapter(int id);
+    List<Chapter> getAllMyChapter(int idBook);
 }

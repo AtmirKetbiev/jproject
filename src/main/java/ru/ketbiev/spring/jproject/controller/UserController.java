@@ -20,22 +20,21 @@ public class UserController {
     @Autowired
     private RoleService roleService;
 
-    @GetMapping("/users")
+    @GetMapping
     public List<User> showAllEmployees() {
         return userService.getAllUser();
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/{id}")
     public Optional<User> getEmployees(@PathVariable int id) {
         User user = userService.getUser(id).orElse(null);
-
         if (user == null) {
             throw new NoSuchException("User");
         }
         return userService.getUser(id);
     }
 
-    @PostMapping("/users")
+    @PostMapping
     public User addNewEmployee(@RequestBody User user) {
         Role role = roleService.findByRole("ROLE_USER");
         Set<Role> roles = new HashSet();
@@ -45,20 +44,18 @@ public class UserController {
         return user;
     }
 
-    @PutMapping("/users")
+    @PutMapping
     public User updateEmployee (@RequestBody User user) {
         userService.saveUser(user);
         return user;
     }
 
-    @DeleteMapping("/users/{id}")
+    @DeleteMapping("/{id}")
     public String deleteEmployees(@PathVariable int id) {
         User user = userService.getUser(id).orElse(null);
-
         if (user == null) {
             throw new NoSuchException("User");
         }
-
         userService.deleteUser(id);
         return "Deleted id = " + id;
     }

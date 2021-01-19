@@ -1,5 +1,6 @@
 package ru.ketbiev.spring.jproject.service;
 
+import ru.ketbiev.spring.jproject.model.Chapter;
 import ru.ketbiev.spring.jproject.model.Note;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface NoteService {
     void saveNote(Note note);
     Optional<Note> getNote(int id);
     void deleteNote(int id);
+    List<Note> getAllMyNote(int idBook);
 }
